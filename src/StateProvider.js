@@ -2,12 +2,12 @@
 import { createContext, useContext, useReducer } from "react";
 
 //THIS IS DATA LAYER
-export const StateContext = createContext();
+ const StateContext = createContext();
 
 //BUILD A PROVIDER(WILL WRAP ALL THE APP WITH THIS PROVIDER)
 
 export const StateProvider = ({ reducer, initialState, children }) => {
-  return (
+   (
     <StateContext.Provider value={useReducer(reducer, initialState)}>
       {children}
     </StateContext.Provider>
